@@ -8,7 +8,8 @@ public class LineComparison {
     Line l1 = new Line();
     double length1 = l1.getInputForLine1();
     double length2 = l1.getInputForLine2();
-        Line.compareTo(length1,length2);
+        Line.checkEquality(length1,length2);
+
 
 
     }
@@ -51,16 +52,15 @@ class Line
     }
     public static void checkEquality(double length1,double length2) {
 
-        {
-                if (length1 == length2)
-                {
+                if (length1 == length2) {
                     System.out.println("lines are equal ");
                 }
                 else{
                     System.out.println("Lines2 are not equal");
                 }
-        }
     }
+
+
 }
 
 
