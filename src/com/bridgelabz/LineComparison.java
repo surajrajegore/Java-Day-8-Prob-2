@@ -8,10 +8,10 @@ public class LineComparison {
     Line l1 = new Line();
     double length1 = l1.getInputForLine1();
     double length2 = l1.getInputForLine2();
+    Double line1Obj = new Double(length1);
+    Double line2obj = new Double(length2);
         Line.checkEquality(length1,length2);
-
-
-
+        Line.compare(line1Obj,line2obj);
     }
 }
 class Line
@@ -28,8 +28,6 @@ class Line
         double x = Math.pow((x2 - x1), 2);
         double y = Math.pow((y2 - y1), 2);
        return calculateLength(x,y);
-
-
     }
     public double getInputForLine2() {
 
@@ -56,11 +54,18 @@ class Line
                     System.out.println("lines are equal ");
                 }
                 else{
-                    System.out.println("Lines2 are not equal");
+                    System.out.println("Lines are not equal");
                 }
     }
-
-
+    public static void compare(Double obj1,Double obj2) {
+        int compareValue = obj1.compareTo(obj2);
+        if (compareValue == 0)
+            System.out.println("line1 and line22 are equal");
+        else if (compareValue < 0)
+            System.out.println("line1 is less than line22");
+        else
+            System.out.println("line1 is greater than line2");
+    }
 }
 
 
